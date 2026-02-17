@@ -41,16 +41,16 @@ function WebTabsLayout() {
       }}
     >
       <WebTabs.Screen
-        name="index"
+        name="(pokedex)"
         options={{
-          title: "Home",
-          tabBarIcon: (props) => <MaterialIcons {...props} name="home" />,
+          title: "Pokedex",
+          tabBarIcon: (props) => <MaterialIcons {...props} name="catching-pokemon" />,
         }}
       />
       <WebTabs.Screen
         name="info"
         options={{
-          title: "Info",
+          title: "About",
           tabBarIcon: (props) => <MaterialIcons {...props} name="info" />,
         }}
       />
@@ -61,22 +61,22 @@ function WebTabsLayout() {
 function NativeTabsLayout() {
   return (
     <NativeTabs>
-      <NativeTabs.Trigger name="index">
-        <NativeTabs.Trigger.Label>Home</NativeTabs.Trigger.Label>
+      <NativeTabs.Trigger name="(pokedex)">
+        <NativeTabs.Trigger.Label>Pokedex</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
           {...Platform.select({
-            ios: { sf: { default: "house", selected: "house.fill" } },
+            ios: { sf: { default: "character.book.closed", selected: "character.book.closed.fill" } },
             default: {
-              src: <NativeTabs.Trigger.VectorIcon family={MaterialIcons} name="home" />,
+              src: <NativeTabs.Trigger.VectorIcon family={MaterialIcons} name="catching-pokemon" />,
             },
           })}
         />
       </NativeTabs.Trigger>
       <NativeTabs.Trigger name="info">
-        <NativeTabs.Trigger.Label>Info</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Label>About</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
           {...Platform.select({
-            ios: { sf: "cursorarrow.rays" },
+            ios: { sf: "info.circle" },
             default: {
               src: <NativeTabs.Trigger.VectorIcon family={MaterialIcons} name="info" />,
             },
